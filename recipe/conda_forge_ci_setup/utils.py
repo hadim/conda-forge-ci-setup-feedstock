@@ -17,11 +17,11 @@ import rattler_build_conda_compat.render
 CONDA_BUILD = "conda-build"
 RATTLER_BUILD = "rattler-build"
 
-os.makedirs(".joblib_cache", exist_ok=True)
-JOBLIB_MEMORY = joblib.Memory(".joblib_cache", verbose=0)
+# os.makedirs(".joblib_cache", exist_ok=True)
+# JOBLIB_MEMORY = joblib.Memory(".joblib_cache", verbose=0)
 
 
-@JOBLIB_MEMORY.cache
+# @JOBLIB_MEMORY.cache
 def get_built_distribution_names_and_subdirs(recipe_dir=None, variant=None, build_tool=None):
     feedstock_root = os.environ.get(
         "FEEDSTOCK_ROOT",
